@@ -1,0 +1,13 @@
+[Unit]
+Description=Start FluidSynth and connect MIDI devices
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/portsynth
+User=root
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
