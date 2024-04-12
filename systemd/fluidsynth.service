@@ -3,7 +3,7 @@ Description=Start FluidSynth on system boot
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/fluidsynth -v -a alsa -m alsa_seq -l -i /usr/share/sounds/sf2/FluidR3_GM.sf2 -s -o audio.alsa.device=hw:0
+ExecStart=/home/pieter/portsynth/python/venv/bin/python /home/pieter/portsynth/python/manage_fluidsynth.py
 User=root
 Restart=always
 
