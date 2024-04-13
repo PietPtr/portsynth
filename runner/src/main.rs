@@ -51,7 +51,7 @@ fn connect_midi() {
                             info!("Successfully connected {} to FluidSynth", port);
                             connected = true;
                         } else {
-                            error!("Failed to connect {} to FluidSynth", port);
+                            error!("Failed to connect {} to FluidSynth: \n{output}", port);
                         }
                     }
                     Err(e) => error!("Error connecting {} to FluidSynth: {}", port, e),
