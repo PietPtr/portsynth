@@ -1,0 +1,10 @@
+[Unit]
+Description=LED Monitor Service
+After=fluidsynth.service midi-connector.service
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/led-monitor.py
+
+[Install]
+WantedBy=multi-user.target

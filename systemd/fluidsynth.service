@@ -6,6 +6,8 @@ Type=simple
 ExecStart=/home/pieter/portsynth/python/venv/bin/python /home/pieter/portsynth/python/manage_fluidsynth.py
 User=root
 Restart=always
+StandardOutput=journal
+StandardError=inherit
 
 [Install]
 WantedBy=multi-user.target
