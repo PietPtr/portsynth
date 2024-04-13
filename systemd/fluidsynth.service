@@ -1,5 +1,5 @@
 [Unit]
-Description=Start FluidSynth on system boot
+Description=FluidSynth management script
 
 [Service]
 Type=simple
