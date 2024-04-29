@@ -4,6 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+fluidsynth = "0.0.1"
 log = "0.4.21"
-regex = "1.10.4"
-simple_logger = "4.3.3"
+midir = "0.10.0"
+wmidi = "4.0.10"

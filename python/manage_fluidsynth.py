@@ -2,11 +2,9 @@ import sys
 import mido
 import fluidsynth
 
-# Initialize FluidSynth
 fs = fluidsynth.Synth()
 fs.start(driver='alsa')
 
-# Load a SoundFont (replace 'soundfont.sf2' with your actual SoundFont file)
 sfid = fs.sfload('/usr/share/sounds/sf2/default-GM.sf2')
 fs.program_select(0, sfid, 0, 0)  
 fs.program_select(9, sfid, 128, 0)  
