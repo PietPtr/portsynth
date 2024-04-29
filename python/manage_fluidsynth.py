@@ -23,15 +23,13 @@ class PortSynth:
                 fs.program_change(0, new_program)
             elif msg.control == 71: # K2 = volume
                 fs.cc(0, 7, msg.value)
-            elif msg.control == 72: # K3 = vibrato
-                fs.cc(0, 1, msg.value)
-            elif msg.control == 73: # K4 = expression
+            elif msg.control == 72: # K3 = expression
                 fs.cc(0, 11, msg.value)
-            elif msg.control == 74: # K5 = minimum velocity
+            elif msg.control == 73: # K4 = minimum velocity
                 self.min_velocity = msg.value
-            elif msg.control == 75: # K6 = reverb
+            elif msg.control == 74: # K5 = reverb
                 fs.cc(0, 91, msg.value)
-            elif msg.control == 76: # K7 = chorus
+            elif msg.control == 75: # K6 = chorus
                 fs.cc(0, 93, msg.value)
         elif msg.type == 'note_on':
             fs.noteon(msg.channel, msg.note, min(msg.velocity + self.min_velocity, 127))
